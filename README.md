@@ -2,8 +2,10 @@
 
 A 2-page Power BI report that shows how the housing market is doing: prices, sales, regions and sale types. Built with Power Query, DAX and Row-Level Security (RLS).
 
-![Report Page 1](images/report-page-1.png)
-![Report Page 2](images/report-page-2.png)
+<img width="1341" height="755" alt="Report-1" src="https://github.com/user-attachments/assets/ae8242a7-e856-4e02-beb5-24fe8708ecad" />
+
+<img width="1341" height="752" alt="Report-2" src="https://github.com/user-attachments/assets/36917e46-991c-4bb0-b1d0-e5eb9db519a5" />
+
 
 ---
 
@@ -67,7 +69,8 @@ Give a quick, clear view of the housing market and answer simple questions like:
 
 `house_id`, `date`, `quarter`, `region`, `city`, `area`, `address`, `house_type`, `sales_type`, `no_rooms`, `sqm`, `sqm_price`, `purchase_price`, `Offer_Price`, `%_change_between_offer_and_purchase`, `year_build`, `Age`, `dk_ann_infl_rate%`, `nom_interest_rate%`, `yield_on_mortgage_credit_bonds%`
 
-![Data Model](images/data-model.png)
+<img width="1866" height="830" alt="DATA Model" src="https://github.com/user-attachments/assets/b8b995f6-9188-431e-ba08-2662f42047d3" />
+
 
 ---
 
