@@ -1,8 +1,9 @@
-# Housing-Data-Overview-Power-BI-Dashboard
-A 2-page Power BI report that shows how the housing market is doing: prices, sales, regions and sale types. 
-<img width="1341" height="755" alt="Report-1" src="https://github.com/user-attachments/assets/f983e87f-4406-48c8-ae1d-bc077e48fb47" />
+# 🏠 Housing Data Overview | Power BI Dashboard
 
-<img width="1341" height="752" alt="Report-2" src="https://github.com/user-attachments/assets/0e727acb-2cf0-4cc7-9f47-057bf2d8980d" />
+A 2-page Power BI report that shows how the housing market is doing: prices, sales, regions and sale types. Built with Power Query, DAX and Row-Level Security (RLS).
+
+![Report Page 1](images/report-page-1.png)
+![Report Page 2](images/report-page-2.png)
 
 ---
 
@@ -28,7 +29,7 @@ Give a quick, clear view of the housing market and answer simple questions like:
 - YOY Sales Growth by Sales Type
 
 ### Page 2: Sales Performance
-- Average Price per Square Meter(SQM) by Region (donut chart)
+- Average Price per SQM by Region (donut chart)
 - Key Influencers (what drives the purchase price)
 - Daily table with Year, Quarter, Month, Day, Total YTD Sales and Purchase Price
 - Sales by Region (bar chart)
@@ -56,6 +57,7 @@ Give a quick, clear view of the housing market and answer simple questions like:
 | Power Query | Fixed data types, added a conditional column, merged queries |
 | Data Model | One main table (`Housing Data`) plus a separate `Measure Table-1` for all measures |
 | DAX | 8 measures (listed below) and 2 calculated columns (`Age`, `Offer_Price`) |
+| Security | Row-Level Security (RLS) so each user sees only the data they are allowed to see |
 | Visuals | Donut, bar, scatter, area, table, cards, Key Influencers |
 | Design | Dark green theme, 1920 x 1080 canvas |
 
@@ -65,8 +67,7 @@ Give a quick, clear view of the housing market and answer simple questions like:
 
 `house_id`, `date`, `quarter`, `region`, `city`, `area`, `address`, `house_type`, `sales_type`, `no_rooms`, `sqm`, `sqm_price`, `purchase_price`, `Offer_Price`, `%_change_between_offer_and_purchase`, `year_build`, `Age`, `dk_ann_infl_rate%`, `nom_interest_rate%`, `yield_on_mortgage_credit_bonds%`
 
-<img width="1866" height="830" alt="DATA Model" src="https://github.com/user-attachments/assets/f55874ef-991b-4c98-827e-c6870a70d75a" />
-
+![Data Model](images/data-model.png)
 
 ---
 
@@ -113,9 +114,9 @@ RETURN
     )
 ```
 
-**4. Offer To Square Meter(SQM) Ratio**
+**4. Offer To SQM Ratio**
 ```DAX
-Offer_To_SQM_Ratio = DIVIDE(SUM('Housing Data'[Offer_Price]), SUM('Housing Data'[sqm]))
+Offer_To_SQM_Ration = DIVIDE(SUM('Housing Data'[Offer_Price]), SUM('Housing Data'[sqm]))
 ```
 
 **5. Sales By Region**
@@ -165,6 +166,11 @@ RETURN
 
 ---
 
+## 🔐 Row-Level Security (RLS)
+
+RLS is set up in Power BI Desktop (**Modeling > Manage roles**). Each role has a DAX filter on the `Housing Data` table, so a user only sees the rows they are allowed to see. Use **View as** to test a role before publishing.
+
+---
 
 ## 📁 Repository Structure
 
