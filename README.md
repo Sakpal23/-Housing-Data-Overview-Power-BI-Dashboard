@@ -1,6 +1,6 @@
 # 🏠 Housing Data Overview | Power BI Dashboard
 
-A 2-page Power BI report that shows how the housing market is doing: prices, sales, regions and sale types. Built with Power Query, DAX and Row-Level Security (RLS).
+A 2-page Power BI report that shows how the housing market is doing: prices, sales, regions and sale types. Built with Power Query and DAX.
 
 <img width="1341" height="755" alt="Report-1" src="https://github.com/user-attachments/assets/ae8242a7-e856-4e02-beb5-24fe8708ecad" />
 
